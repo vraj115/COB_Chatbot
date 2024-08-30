@@ -1,0 +1,73 @@
+City of Brampton Xplor Recreation Chatbot
+This project implements a chatbot for the City of Brampton Xplor Recreation website. The chatbot assists users by providing information on recreational services, offering directions to locations, and handling queries in multiple languages (English, French, and Spanish) using the Google Cloud Translation API.
+
+Features
+Interactive Chat Interface: Users can type questions and receive responses directly from the chatbot interface.
+Google Maps Integration: The chatbot can provide directions or maps to specific locations.
+Multilingual Support: Users can interact with the chatbot in English, French, or Spanish. The chatbot translates input and output using the Google Cloud Translation API.
+Quick Access Buttons: Predefined buttons allow users to quickly inquire about common topics such as memberships, account creation, and program registration.
+Hyperlink Insertion: When the chatbot provides directions, it includes a clickable hyperlink to Google Maps.
+Prerequisites
+Python 3.x
+Google Cloud Translation API
+API key for Google Cloud Translation API (you can use the same API key for the Maps API).
+Installation
+Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/yourusername/brampton-chatbot.git
+cd brampton-chatbot
+Install the required Python packages:
+
+bash
+Copy code
+pip install -r requirements.txt
+Set up the Google Cloud Translation API:
+
+Enable the Google Cloud Translation API in your Google Cloud Console.
+Obtain your API key.
+Replace the placeholder in main.py with your API key.
+Run the chatbot:
+
+bash
+Copy code
+python main.py
+Project Structure
+main.py
+This is the main entry point for the chatbot application. It creates the chatbot interface using customtkinter and handles user input. Key functionalities include:
+
+Translating user input to English for processing.
+Handling map and direction queries.
+Translating chatbot responses back to the user's selected language.
+Inserting hyperlinks for directions or maps into the chat log.
+chat_code.py
+This module contains the core logic for handling user queries. It includes functions such as:
+
+get_response(user_input): Processes general queries and returns appropriate responses.
+handle_location_query(location): Generates a Google Maps URL based on the provided location.
+handle_directions_query(origin, destination): Generates a Google Maps URL for directions between two points.
+requirements.txt
+This file lists all the dependencies required for the project. Install them using pip install -r requirements.txt.
+
+assets/
+This directory (create if needed) should contain any static assets like images used by the chatbot interface.
+
+Usage
+Starting the Chatbot: Run python main.py to launch the chatbot. The interface will appear, showing the Brampton logo and an input field where users can type their queries.
+
+Using Quick Access Buttons: On the right side of the interface, several buttons provide quick access to common queries. Click any button to automatically populate the input field with the corresponding text and submit it.
+
+Language Selection: Use the dropdown menu at the bottom right to select your preferred language (English, French, or Spanish). The chatbot will handle input and output in the selected language.
+
+Asking for Maps or Directions:
+
+Type "map to [location]" to receive a Google Maps link to the location.
+Type "directions from [origin] to [destination]" to get a link for directions between two locations.
+Clicking Links: If the chatbot's response includes a link, click on "Click here for directions" to open the map in your web browser.
+
+Known Issues
+Ensure the Google Cloud API key is properly configured to avoid issues with translation.
+Make sure your internet connection is stable, as the chatbot relies on live API calls to Google Cloud services.
+Contribution
+If you would like to contribute to this project, please fork the repository and submit a pull request. All contributions are welcome!

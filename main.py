@@ -7,7 +7,7 @@ import re
  
  
 # Google Cloud Translation API key
-API_KEY = "AIzaSyBale6GUW-7By0SrLqHqdZ94WNgjG0urWo"
+API_KEY = "API KEY"
  
 # Supported languages
 LANGUAGES = {
